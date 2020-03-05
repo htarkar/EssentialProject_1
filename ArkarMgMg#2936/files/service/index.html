@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>M_Logo Service</title>
+   <!-- ---------- aos css -------------- -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- font awesome cdn -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!-- -------- custom css ---------- -->
+    <link rel="stylesheet" href= "style.css">
+    
+</head>
+<body>
+
+   
+
+    <!-- -------------- header -------------- -->
+     <header>
+     
+        <h2>M_Logo</h2>
+         <div class="content">
+            <h1>Welcome form the Phone <span data-text="Hardware Service">Software Service</span></h1>
+              <p>Our team repair broken mobile devices in a time with a light price with 24 hours service.
+                If you have not time to go to the phone shop, call us for we have a special service that repair phone 
+                to your current location<i class="fa fa-map-marker" aria-hidden="true"></i>.
+              </p>
+              <div class="button">
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>Call Now</a>
+                <a href="#"><i class="fa fa-bell" aria-hidden="true"></i>
+                 </a>
+              </div>
+          </div>
+
+          <div class="image_header">
+            <img src="../image/pic_2.png" alt="pic_2" /> 
+          </div>
+
+
+     </header>
+     <!-- -------------- header -------------- -->
+
+
+   <!-- ------------- people -------------- -->
+<!-- 
+ <div class="people">
+
+     <div class="people_1">
+        <div class="people_image">
+           <img src="../image/user3.png" alt="software repair" />
+        </div>
+        <div class="people_content">
+
+        </div>
+     </div>
+ </div> -->
+
+
+<!-- -----//-------- people -------//------- -->
+
+   <!-- -------------- js animation ------------ -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js" integrity="sha256-VV47uJSoHZUeiBcCs3FcBOQLMn++yeG/zqZvaUkvGZM=" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+   
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+    AOS.init();
+  </script>
+    <!-- ------------- custom js script ------------ -->
+    <script>
+        const header = document.querySelector("#header");
+        const image_header = document.querySelector(".image_header");
+        const image = document.querySelector(".image");
+        const header_h2 = document.querySelector(".header_h2");
+
+        const t1 = new TimelineMax();
+
+        t1.fromto(image_header,1,{height: "0%"}, {height: "60%"});
+    </script>
+    <!-- --------//----- custom js script -------//----- -->
+</body>
+</html>

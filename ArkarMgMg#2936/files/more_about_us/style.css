@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+* ,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    font-family: sans-serif;
+   
+  }
+  /* ---------page_1 ---------------- */
+  section.page_1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 65%;
+    height: 100vh;
+    background-color: #000;
+    background-size: 300%;  
+    z-index: 1;
+    box-shadow: 0 0 4px 0 rgba(76, 72, 72, 0.8);
+}
+section.page_1 > .container {
+    width:94%;
+    margin: 0 auto;
+    height: 40%;
+    display: flex;
+}
+.container_content {
+    flex:55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+}
+.container_content > h2{
+  font-family: 'Nunito', sans-serif;
+    color: #fff;
+}
+.container_content > p {
+  font-family: 'Nunito', sans-serif;
+    color: #fff;
+    font-size: .8em;
+    opacity: .6;
+    padding: 20px 40px;
+}
+.container_image {
+    position: relative;
+    flex: 45%;
+    margin: 30px auto;
+}
+.container_image > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.page_1 > .container_2 {
+    width:94%;
+    height: 57%;
+    display: flex;
+}
+section.page_1 > h2 {
+  position: absolute;
+  top: 33%;
+  left: 65px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  opacity: .4;
+  z-index: 5;
+}
+section.page_1 > h2:nth-child(3) {
+  left: 475px;
+}
+  .box{
+    flex: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 7px auto;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.4);
+  } 
+  .box_1{
+    flex: 75%;
+    height: 100%;
+    display: flex;
+    margin: 7px auto;
+  }
+  .box_1 > .admin {
+    position: relative;
+    width: 52%;
+    height: 58%;
+    margin: 20px 10px;
+    z-index: 1;
+  }
+  .box_1 > .admin::after {
+    content: attr(data-text);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    text-align: left;
+    padding: 0 10px;
+    line-height: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-size: .85em;
+    transition: bottom .3s, border .3s;
+    border-left: 5px solid transparent;
+    color: #fff;
+    z-index: -1;
+    cursor: pointer;
+  }
+  .box_1 > .admin:hover:after {
+    bottom: -20%;
+    border-left: 5px solid rgb(99,0,237);
+  }
+  .box_1 > .admin > .admin_photo {
+    width: 100%;
+    height:100%;
+    transition: transform .3s,background .4s;
+    transform: translateX(0%);
+    background-color: #000;
+    box-shadow: 0 0 4px 0 rgba(76, 72, 72, 0.2);
+    z-index: 2;
+  }
+
+  .box_1 > .admin >  .admin_information {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: .75em;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: transform .4s;
+    transform: translateX(0%);
+    background-color: #000;
+    box-shadow: 0 0 4px 0 rgba(76, 72, 72, 0.2);
+    z-index: -1;
+    font-family: 'Nunito', sans-serif;
+  }
+  .box_1 > .admin:hover > .admin_photo {
+    background-color: rgb(99,0,237);
+  }
+  .box_1 > .admin:hover >  .admin_information {
+    transform: translateX(100%);
+    box-shadow: 0 0 4px 0 rgba(76, 72, 72, 0.6);
+  }
+  td {
+    padding-left: 20px;
+    padding: 5px 10px;
+  }
+  tr > td:nth-child(1) {
+    width: 120px;
+    display: inline-block;
+    cursor: pointer;
+  }
+ tr > td:nth-child(3) {
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .box_1 > .admin > .admin_photo > img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    opacity: .6;
+    transition: opacity .3s;
+  }
+  .box_1 > .admin > .admin_photo > img  {
+  opacity: 1;
+  }
+  .box_1 > .admin > .admin_photo > h2 {
+    color: #fff;
+    opacity: .2;
+    font-size: 15px;
+    position: absolute;
+    left: 17%;
+    bottom: 0;
+    text-transform: capitalize;
+    transition: opacity .3s;
+  }
+  .box_1 > .admin:hover > .admin_photo > h2 {
+    opacity: .6;
+  }
+  .card{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #000;
+    border-radius: 4px;
+    margin: 10px auto;
+    box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.59);
+  }
+  .card:before,
+  .card:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: rgba(76, 72, 72, 0);
+    transition: 0.35s;
+    box-shadow: 0 0 4px 0 rgba(76, 72, 72, 0);
+    z-index:-1;
+  }
+  .card:hover:before{
+  transform: rotate(10deg);
+  box-shadow: 0 0 4px 0 rgba(76, 72, 72, 0.8);
+  }
+  .card:hover:after{
+  transform: rotate(5deg);
+  box-shadow: 0 0 4px 0 rgba(76, 72, 72, 0.8);
+  }
+  .card .imgBx{
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 5px;
+  right: 2px;
+  background-color: #000;
+  transition: 0.35s;
+  z-index: 1;
+  }
+  
+  .card:hover .imgBx
+  {
+    bottom: 45px;
+  }
+
+  .card .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .card .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 30px;
+      text-align: center;
+  }
+
+  .card .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 14px;
+   color: #777;
+   text-transform: uppercase;
+   font-family: cursive;
+  } 
+
+  .card .details h2 span{
+  font-weight: 500;
+  font-size: 10px;
+  color: #671886;
+  display: block;
+  margin-top: 5px;
+  font-family:Arial, Helvetica, sans-serif;
+   } 
+   
+  /* ------//---page_1 ---------//------- */

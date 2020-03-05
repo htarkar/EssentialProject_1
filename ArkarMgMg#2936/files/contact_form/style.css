@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cute+Font&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kulim+Park:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100vh;
+}
+.contact_us_form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    width: 400px;
+    height: 500px;
+    z-index: 1000;
+}
+.contact_us_form > .header {
+    position: absolute;
+    transition: transform .3s;
+    width: 400px;
+    height: 500px;
+    background: #000;
+    box-shadow: 0 1px 10px 0 rgb(31, 30, 30);
+}
+form { 
+    position: relative;
+    left: 40px;
+    bottom: 0;
+    width: 400px;
+    height: 500px;
+    background: #000;
+    box-shadow: 0 1px 10px 0 rgb(31, 30, 30);
+    transition: transform .4s;
+    transform: translateX(-100%) scale(.9);
+    padding: 13px 19px;
+    padding-top: 60px;
+    z-index: 3;
+}
+.contact_us_form > .header ul {
+    position: absolute;
+   display: block;
+   top: 49%;
+   left: 13%;
+}
+.contact_us_form > .header ul li {
+   color: #fff;
+   font-family: 'Cute Font', cursive;
+   font-size: 1.2em;
+}
+.contact_us_form > .header img {
+    position: absolute;
+    left: 10%;
+    top: 6%;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+}
+.contact_us_form > .header  h2 {
+    letter-spacing: 2px;
+    position: absolute;
+    left: 58%;
+    top: 18.4%;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+}
+.contact_us_form > .header  h2 span {
+    font-size: 1em;
+}
+.contact_us_form > .header  h2 small {
+    padding: 0 5px;
+    font-size: .8em;
+    line-height: 30px;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.contact_us_form > .header  h2 ~ p {
+    color: white;
+    position: absolute;
+    top: 40%;
+    padding: 0 40px;
+    text-align: justify;
+    font-family: 'Cute Font', cursive;
+    font-size: x-large;
+}
+.contact_us_form .content .btn{
+    position: absolute;
+    width: 130px;
+    left: 10%;
+    bottom: 10%;
+    padding: 12px 0px;
+    border-radius:25px;
+    background-color:  rgb(83, 30, 216);
+    background-size: 400%;
+    text-transform: uppercase;
+    z-index: -2;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 28px;
+    
+}
+/* .contact_us_form .content i,
+.contact_us_form .content input.contact_btn {
+    position: absolute;
+    left: 36%;
+    bottom: 13%;
+}
+.contact_us_form .content input.contact_btn {
+    width: 19px ;
+    height: 19px;
+    z-index: 100000000;
+    opacity: 0;
+
+} */
+.contact_btn:checked ~ .header {
+    transform: translateX(0%);
+}
+.contact_btn:checked ~ .toggle_btn {
+    display: block;
+}
+.close_btn:checked ~ .header {
+    transform: translateX(-90%) scale(.9);
+ }
+
+ .close_btn:checked ~ .toggle_btn {
+    transform: rotate(316deg);
+    
+ }
+
+form label {
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.1em;
+}
+form > input ,
+form > textarea {
+    color: #fff;
+    outline: none;
+    border: none;
+    width: 100%;
+    display: inline-block;
+    padding: 16px 9px;
+    background-color: transparent;
+    margin: 10px 0 5px 0;
+    box-shadow: 0 3px 4px 0 rgb(20, 19, 19);
+} 
+form > input[type="submit"] {   
+    outline: none;
+    border: none;
+   width: 30%;
+   float: right;
+   transition: background-color .3s;
+   font-family: 'Noto Sans JP', sans-serif;
+   border-radius: 30px;
+}
+form > input[type="submit"]:hover {
+    box-shadow: 0 3px 4px 0 rgb(99, 0, 167);
+}
+/* form > button.cancel {
+    outline: none;
+    border: none;
+    padding: 13px 19px;
+    width: 30%;
+    float: left;
+    border-radius: 20px;
+    margin: 10px 0;
+    transition: background-color .5s;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+form > button.cancel:hover {
+    background-color: rgb(233, 59, 59);
+    color: #fff;
+} */
+form > textarea {
+    height: 140px;
+}
+
+.close_btn , 
+.toggle_btn {
+    position: absolute;
+    top:35px;
+    left: -27px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+   line-height: 38px;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: .3s;
+    background-color:  rgb(99, 0, 167);
+    
+}
+ input.close_btn{
+    z-index: 18;
+    opacity: 0;
+}
+.toggle_btn {
+    z-index: 4;
+}
+.toggle_btn span{
+    color:white;
+    background:inherit;
+    font-size: 22px;
+    font-weight: bold;
+}
+
